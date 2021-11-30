@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+	--clr-text-dark: hsl(249, 10%, 26%);
+	--clr-text-light: hsl(246, 25%, 77%);
+	--clr-blue: hsl(248, 32%, 49%);
+	--clr-red: hsl(0, 100%, 74%);
+	--clr-green: hsl(154, 59%, 51%);
+	--clr-white: hsl(360, 100%, 100%);
+	--rgba-white: rgba(255, 255, 255, 0.7);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	color: var(--clr-white);
+	width: 100vw;
+	overflow-x: hidden;
+	min-height: 100vh;
+	background-image: url(/images/bg-intro-desktop.png);
+	background-color: var(--clr-red);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+::placeholder {
+	font-family: inherit;
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: var(--clr-text-light);
+}
+
+input {
+	padding: 0.7em 1em;
+	border-radius: 5px;
+	border: 1px solid var(--clr-text-light);
+	width: 100%;
+}
+
+/* Main Container */
+.container {
+	width: 85%;
+	max-width: 70rem;
+	margin-inline: auto;
+	margin-block: 2em;
+	display: grid;
+	grid-template-areas: "content" "form";
+	/* grid-template-columns: repeat(2, 1fr); */
+	gap: 2rem;
+	align-items: center;
+	text-align: center;
+}
+
+.content-box {
+	grid-area: content;
+}
+
+.form-box {
+	grid-area: form;
+}
+
+/* Content Section */
+.content-box h1 {
+	font-size: 1.5rem;
+	line-height: 1.3;
+	margin-bottom: 0.6em;
+}
+
+.content-box p {
+	font-size: 0.9rem;
+	color: var(--rgba-white);
+	max-width: 50ch;
+}
+
+/* Form Section */
+.form-box h2 {
+	background-color: var(--clr-blue);
+	color: var(--rgba-white);
+	font-size: 1rem;
+	border-radius: 5px;
+	text-align: center;
+	padding-block: 0.5rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+	font-weight: 400;
+}
+
+.form-box h2 span {
+	color: var(--clr-white);
+	font-weight: 600;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2em;
+	border-radius: 5px;
+	background-color: var(--clr-white);
+	min-height: 60vh;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.form .terms {
+	font-size: 0.6rem;
+	color: var(--clr-text-light);
+	letter-spacing: -0.5px;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+.form .terms span {
+	color: var(--clr-red);
+	font-weight: 500;
+}
+
+/* Show / Hide Password Icon */
+.form-control i {
+	position: absolute;
+	right: 3em;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--clr-blue);
+	cursor: pointer;
+	transition: opacity 0.3s linear;
+}
+
+.form-control i:hover {
+	opacity: 0.7;
+}
+
+/* Form Control */
+.form-control {
+	position: relative;
+	margin-bottom: 1.7em;
+}
+
+.form-control .error-message {
+	position: absolute;
+	font-size: 0.6rem;
+	font-weight: 500;
+	color: var(--clr-red);
+	bottom: -1.8em;
+	right: 0;
+	opacity: 0;
+}
+
+.form-control.error .error-message,
+.form-control.error .icon-error {
+	opacity: 1;
+}
+
+.form-control input:focus {
+	outline: none;
+	border: 2px solid var(--clr-blue);
+}
+
+.form-control.success input {
+	border: 2px solid var(--clr-green);
+}
+
+.form-control.error input {
+	border: 2px solid var(--clr-red);
+	color: var(--clr-red);
+}
+
+.form-control .icon-error {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 0.66rem;
+	top: 0.66rem;
+	opacity: 0;
+}
+
+.btn-submit {
+	padding-block: 0.6rem;
+	text-transform: uppercase;
+	font-family: inherit;
+	color: inherit;
+	letter-spacing: -0.5px;
+	background-color: var(--clr-green);
+	border-radius: 5px;
+	border: 1px solid var(--clr-green);
+	box-shadow: 0 3px 3px rgba(0, 200, 100, 0.7);
+	cursor: pointer;
+}
+
+.btn-submit:hover {
+	opacity: 0.8;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+@media (min-width: 40em) {
+	.container {
+		width: 85%;
+		max-width: 70rem;
+		grid-template-areas: "content form";
+		grid-template-columns: repeat(2, 1fr);
+		text-align: start;
+	}
+
+	.content-box {
+		grid-area: content;
+	}
+
+	.form-box {
+		grid-area: form;
+	}
+
+	.content-box h1 {
+		font-size: 3rem;
+		line-height: 1.2;
+	}
+}

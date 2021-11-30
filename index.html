@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Intro component with sign up form</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main id="main" class="container">
+			<section id="section-content" class="content-box">
+				<h1>Learn to code by watching others</h1>
+				<p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+			</section>
+
+			<section id="section-form" class="form-box">
+				<h2><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
+				<form id="form" class="form">
+					<div class="form-control">
+						<label for="firstname" class="label"></label>
+						<input type="text" class="input" id="firstname" name="firstname" placeholder="First Name" />
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<div class="form-control">
+						<label for="lastname" class="label"></label>
+						<input type="text" class="input" id="lastname" name="lastname" placeholder="Last Name" />
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<div class="form-control">
+						<label for="email" class="label"></label>
+						<input type="text" class="input" id="email" name="email" placeholder="Email Address" />
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<div class="form-control">
+						<label for="phone" class="label"></label>
+						<input type="text" class="input" id="phone" name="phone" placeholder="Phone Number" />
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<div class="form-control">
+						<label for="password1" class="label"></label>
+						<input type="password" class="input" id="password1" name="password1" placeholder="Password" />
+						<!-- <i class="far fa-eye-slash"></i> -->
+						<i class="far fa-eye"></i>
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<div class="form-control">
+						<label for="password2" class="label"></label>
+						<input type="password" class="input" id="password2" name="password2" placeholder="Confirm Password" />
+						<!-- <i class="far fa-eye-slash"></i> -->
+						<i class="far fa-eye"></i>
+						<img src="/images/icon-error.svg" alt="error" class="icon-error" />
+						<p class="error-message"></p>
+					</div>
+					<button type="submit" class="btn-submit">claim your free trial</button>
+					<p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://annaseregi.me/">Anna Seregi</a></p>
+		</footer>
+
+		<script src="/app.js"></script>
+	</body>
+</html>
